@@ -4,5 +4,14 @@
     "react",
     "stage-2"
   ],
-  "plugins": ["transform-class-properties"]
+  "plugins": [
+    [
+      "react-css-modules",
+      {
+        "handleMissingStyleName": "ignore",
+        "generateScopedName": "[local]___[hash:base64:5]"
+      }
+    ],
+    "transform-class-properties"
+  ]
 }

@@ -1,0 +1,121 @@
+.welcome {
+  height: 100%;
+  display: flex;
+  text-align: center;
+
+  header {
+    font-size: 60px;
+    margin-top: 4em;
+    line-height: 2.5;
+  }
+}
+
+.music-section {
+  width: 50%;
+  height: 100%;
+  background: #D3D7BE;
+}
+
+.music-section header {
+  color: #FAF6F2;
+}
+
+.lyrics-section {
+  width: 50%;
+  height: 100%;
+  background: #EFEAE5;
+}
+
+.lyrics-section header {
+  color: #60897E;
+}
+
+.upload-wrapper {
+  width: auto;
+  position: relative;
+  margin: 0 calc((100% - 180px) / 2);
+  overflow: hidden;
+
+  &.side-a {
+    .upload-icon-wrapper {
+      opacity: 1;
+      transition: all 0.2s ease-in;
+    }
+
+    .upload-area {
+      opacity: 0;
+      transform: translateY(50%);
+      transition:
+        opacity 0.15s ease-out,
+        transform 0.4s ease-out;
+    }
+  }
+
+  &.side-b {
+    .upload-icon-wrapper {
+      opacity: 0;
+      transition: all 0.1s ease-out;
+    }
+
+    .upload-area {
+      opacity: 1;
+      transform: translateY(0);
+      transition:
+        opacity 0.25s ease-in,
+        transform 0.25s ease-out;
+    }
+  }
+}
+
+.upload-icon-wrapper {
+  width: 180px;
+  height: 78px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.upload-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: 78px;
+  vertical-align: middle;
+}
+
+.upload-btn {
+  position: relative;
+  display: inline-block;
+  width: 116px;
+  height: 47px;
+  line-height: 47px;
+  border: 2px solid #60897E;
+  border-radius: 24px;
+  font-size: 20px;
+  text-align: center;
+  overflow: hidden;
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+}
+
+.music-upload-btn {
+  composes: upload-btn;
+
+  border-color: #60897E;
+  color: #60897E;
+}
+
+.lyrics-upload-btn {
+  composes: upload-btn;
+
+  border-color: #D3D7BE;
+  color: #D3D7BE;
+}

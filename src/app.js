@@ -1,7 +1,7 @@
 import React from 'react'
 import { render } from 'react-dom'
 
-import Welcome from './welcome.js'
+import Welcome from './welcome'
 
 import styles from './index.css'
 
